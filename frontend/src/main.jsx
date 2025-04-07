@@ -7,10 +7,18 @@ import { HashRouter} from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <HashRouter>
+    <BrowserRouter>
       <ChakraProvider>
         <App />
       </ChakraProvider>
-    </HashRouter>
+      </BrowserRouter>
   </React.StrictMode>,
 );
+
+<React.StrictMode>
+		<BrowserRouter>
+			<QueryClientProvider client={queryClient}>
+				<App />
+			</QueryClientProvider>
+		</BrowserRouter>
+	</React.StrictMode>
